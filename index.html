@@ -317,7 +317,7 @@ footer{position:relative;z-index:1;background:var(--text);color:#fff;padding:48p
     </a>
     <a class="ov-card reveal" href="#sResearch">
       <div class="ov-icon" style="background:rgba(124,58,237,.1);">🔬</div>
-      <div class="ov-info"><h3>Continuous Learning Research</h3><p>ML research on catastrophic forgetting in production systems</p><span class="ov-badge badge-ongoing">Ongoing</span></div>
+      <div class="ov-info"><h3>Continuous Learning Research</h3><p>LoRA adapter memory that fades gracefully and revives on a hint</p><span class="ov-badge badge-ongoing">Ongoing</span></div>
     </a>
   </div>
   <div class="sub-label" style="margin-top:40px;">Earlier</div>
@@ -332,7 +332,7 @@ footer{position:relative;z-index:1;background:var(--text);color:#fff;padding:48p
     </a>
     <a class="ov-card reveal" href="#sRavenAI">
       <div class="ov-icon" style="background:rgba(37,99,235,.1);">🦅</div>
-      <div class="ov-info"><h3>Raven AI</h3><p>ERP finance AI agent embedded in Microsoft Business Central</p><span class="ov-badge badge-earlier">Complete</span></div>
+      <div class="ov-info"><h3>Raven AI</h3><p>LLM finance agent embedded in a production ERP (Stella)</p><span class="ov-badge badge-earlier">Complete</span></div>
     </a>
   </div>
 </section>
@@ -511,14 +511,14 @@ footer{position:relative;z-index:1;background:var(--text);color:#fff;padding:48p
     <div class="proj-panel reveal">
       <p class="proj-eyebrow" style="color:var(--blue);">Earlier &middot; AI &middot; ERP Integration</p>
       <div class="proj-title">Raven AI</div>
-      <div class="proj-sub">ERP Finance Agent &middot; Microsoft Business Central</div>
-      <p class="proj-desc">An AI finance agent embedded directly in Microsoft Business Central. Interprets natural language queries about invoices, AP/AR, and forecasts, then executes AL scripts to fetch and synthesize live ERP data. Retrieval augmented generation over a custom financial schema.</p>
+      <div class="proj-sub">Embedded LLM Finance Agent &middot; Stella ERP</div>
+      <p class="proj-desc">An agentic LLM assistant embedded directly inside a production ERP&rsquo;s Finance module, running inside the existing PHP monolith with no separate microservice. Streams each tool call live over SSE, calls read tools automatically, and pauses on every write for a human confirmation card, with an immutable audit log on every action.</p>
       <div class="proj-stats">
-        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">RAG</div><div class="proj-stat-lbl">architecture</div></div>
-        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">Live</div><div class="proj-stat-lbl">ERP queries</div></div>
-        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">NL→AL</div><div class="proj-stat-lbl">code generation</div></div>
+        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">SSE</div><div class="proj-stat-lbl">live streaming</div></div>
+        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">3</div><div class="proj-stat-lbl">LLM providers</div></div>
+        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--blue);">HITL</div><div class="proj-stat-lbl">write confirmation</div></div>
       </div>
-      <div class="proj-tags"><span class="tag">Python</span><span class="tag">AL</span><span class="tag">Business Central</span><span class="tag">RAG</span><span class="tag">LLM</span></div>
+      <div class="proj-tags"><span class="tag">PHP 8</span><span class="tag">MySQL</span><span class="tag">SSE</span><span class="tag">Claude</span><span class="tag">Gemini</span><span class="tag">Ollama</span></div>
     </div>
     <div class="raven-visual reveal-r"><canvas id="rvLogo" width="700" height="569" aria-label="Raven AI logo"></canvas></div>
   </div>
@@ -531,14 +531,14 @@ footer{position:relative;z-index:1;background:var(--text);color:#fff;padding:48p
     <div class="proj-panel reveal-r">
       <p class="proj-eyebrow" style="color:var(--purple);">Ongoing &middot; ML Research</p>
       <div class="proj-title">Continuous Learning Research</div>
-      <div class="proj-sub">Catastrophic Forgetting &middot; Neural Networks</div>
-      <p class="proj-desc">Investigating techniques to mitigate catastrophic forgetting in production neural networks. Comparing Elastic Weight Consolidation, Progressive Neural Networks, and replay based methods on sequential task benchmarks. Research driven by real deployment gaps in AlignX&rsquo;s adaptive agents.</p>
+      <div class="proj-sub">LoRA Adapter Memory Fading &amp; Revival</div>
+      <p class="proj-desc">Investigating whether a frozen language model can hold a LoRA adapter memory that fades gracefully when unused and revives on a hint. Built a four part experiment lab: ChromaDB agent memory, vanilla/EWC/replay baselines on split-MNIST, a LoRA harness on Qwen2.5-0.5B, and a 186 test decay battery. Best compression recipe keeps 99% recall at 6.3% of adapter size.</p>
       <div class="proj-stats">
-        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--purple);">EWC</div><div class="proj-stat-lbl">primary method</div></div>
-        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--purple);">3</div><div class="proj-stat-lbl">techniques compared</div></div>
+        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--purple);">99%</div><div class="proj-stat-lbl">recall at 6.3% size</div></div>
+        <div class="proj-stat"><div class="proj-stat-val" style="color:var(--purple);">186</div><div class="proj-stat-lbl">decay tests</div></div>
         <div class="proj-stat"><div class="proj-stat-val" style="color:var(--purple);">Active</div><div class="proj-stat-lbl">research</div></div>
       </div>
-      <div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">Python</span><span class="tag">EWC</span><span class="tag">ML Research</span></div>
+      <div class="proj-tags"><span class="tag">PyTorch</span><span class="tag">LoRA/PEFT</span><span class="tag">ChromaDB</span><span class="tag">Qwen2.5</span></div>
     </div>
   </div>
 </section>
